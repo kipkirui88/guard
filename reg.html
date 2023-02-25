@@ -64,48 +64,62 @@
             <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
               <div class="card" style="background-color: whitesmoke;">
                 <div class="card-header">
-                  <h4>Personal Details.</h4>
+                  <h4>Additional Information.</h4>
                 </div>
                 <div class="card-body">
-                  <form method="">
+                  <form method="POST">
                     <div class="row">
                       <div class="form-group col-6">
-                        <label for="name">Full Name</label>
-                        <input id="name" type="text" class="form-control" name="name" autofocus>
+                        <label for="frist_name">Phone Number</label>
+                        <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
                       </div>
                       <div class="form-group col-6">
-                        <label for="id_no">ID Number</label>
-                        <input id="id_no" type="number" class="form-control" name="id_no">
+                        <label for="last_name">KRA Pin Number</label>
+                        <input id="last_name" type="text" class="form-control" name="last_name">
                       </div>
-                    </div>
-                    <div class="row">
                     <div class="form-group col-6">
-                      <label for="sacco">Sacco Name</label>
-                      <input id="sacco" type="text" class="form-control" name="sacco">
-                      <div class="invalid-feedback">
-                      </div>
+                      <label for="email">Address Location</label>
+                      <input id="email" type="email" class="form-control" name="email">
                     </div>
-                    <div class="form-group col-6">
-                      <label for="membership">Membership No.</label>
-                      <input id="membership" type="number" class="form-control" name="membership">
-                    </div>
-                  </div>
-                    <div class="row">
                       <div class="form-group col-6">
-                        <label for="passport" class="d-block">Upload Size Passport</label>
-                        <input id="passport" type="file" class="form-control" name="passport">
-                      </div>
-                      <div class="form-group col-6">
-                        <label for="payslip" class="d-block">Upload Payslip/ Appoint Letter</label>
+                        <label for="payslip" class="d-block">Business License/ Permit</label>
                         <input id="payslip" type="file" class="form-control" name="payslip">
                       </div>
-                    </div><br><br>
-                  </form>
-                  <div class="form-group">
-                    <a href="reg.html" class="btn btn-success" style="position: absolute;right: 8px;bottom: 5px;">
-                      Next <i class="bi bi-chevron-right"></i>
-                    </a>
+                     </div><hr style="color:gray;">
+                    <h4>Other Info.</h4>
+                    <div class="row">
+                     <div class="form-group col-6">
+                       <label for="frist_name">Next of Kin</label>
+                       <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
+                     </div>
+                     <div class="form-group col-6">
+                       <label for="last_name">Relationship</label>
+                       <input id="last_name" type="text" class="form-control" name="last_name">
+                     </div>
+                   <div class="form-group col-6">
+                     <label for="email">Contact</label>
+                     <input id="email" type="email" class="form-control" name="email">
+                     <div class="invalid-feedback">
+                     </div>
+                   </div>
                   </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                        <label class="custom-control-label" for="agree"><a href="terms.html">ACCEPT TERMS & CONDITION</a></label>
+                      </div>
+                    </div><br><br>
+                    <div class="form-group">
+                       <a href="register.html" class="btn btn-info bi bi-chevron-left" style="position: absolute;left: 8px;bottom: 5px;">
+                         Previous
+                       </a>
+                    </div>
+                    <div class="form-group">
+                      <a href="pay.html" class="btn btn-success" style="position: absolute;right: 8px;bottom: 5px;">
+                        Next <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

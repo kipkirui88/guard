@@ -28,7 +28,48 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-
+<style>/* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    margin-top: 70px;
+    right: 10px;
+    left: 20px;
+    background-color: #fefefe;
+    /* margin: 15% auto; 15%  */
+    /* padding: 20px; */
+    border: 1px solid #888;
+    height: 70vh;
+    width: 90%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #000;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }</style>
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -40,18 +81,19 @@
           <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
           <li><a class="nav-link scrollto" href="services.html">Services</a></li>
-          <li class="dropdown"><a href="" class="bi bi-person-fill"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
+          <!-- <li class="dropdown"><a href="" class="bi bi-person-fill"><span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.html">Login</i></a></li>
               <li><a href="register.html">Register</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <a href="login.html" class="get-started-btn scrollto"><i class="bi bi-lock-fill"></i> Login</a>
+      <!-- <button  class="get-started-btn" id="myBtn">Get Started</button> -->
     </div>
   </header><!-- End Header -->
 
@@ -63,12 +105,57 @@
         <div class="col-xl-6">
           <h2><b>Sacco</b> exit and deposit refund should be easy, fast and convinient for every sacco users.</h2>
           <h2><b>Guarantor's</b> paying for defaulted loan by principal borrower is a pain sacco member should not go through.</h2>
-          <h2><strong>Guarantor's<strong> paying for defaulted loan by principal borrower is a pain sacco member should not go through.</h2>
-          <a href="#about" class="btn-get-started scrollto">Get Started <i class=" bi bi-chevron-right"></i></a>
+          <button  class="btn-get-started" id="myBtn">Get Started</button>
+
         </div>
       </div>
     </div>
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="row">
+      <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h4>Login To Continue</h4>
+          </div>
+          <div class="card-body">
+            <form method="POST" action="#" class="needs-validation" novalidate="">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
+                <div class="invalid-feedback">
+                  Please fill in your email
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="d-block">
+                  <label for="password" class="control-label">Password</label>
+                </div>
+                <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                <div class="invalid-feedback">
+                  please fill in your password
+                </div>
+              </div><br>
+              <div class="form-group">
+                <button type="submit" class="btn btn-info btn-lg btn-block" tabindex="4">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mt-5 text-muted text-center">
+          Don't have an account? <a href="register.html">Create One</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -81,9 +168,10 @@
           <div class="content col-xl-6 d-flex align-items-stretch">
             <div class="content">
               <h3>Guarantor's Guard</h3>
-              <p>
-                Sacco Membership has never been better. You have an emergency and want to liquidate part of your deposit?
-                 You want to increase your deposit to boost your loan amount? Or how about total exit from your Sacco and looking to get your funds plus share capital in 24hours?.</p>
+              <p>Sacco Membership has never been better:</p>
+                <p>1. Get your Refund 24/hrs on Exit.</p>
+                <p>2. Buy shares to Boost your deposit anytime.</p>
+                <p>3. Don't be liable for Defaulted loans you Guaranteed a member.</p>
               <a href="about.html" class="about-btn"><span>About Us</span> <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
@@ -108,16 +196,25 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Guarantors</p>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter">9000+</span>
+              <!-- <h1>9000+</h1> -->
+              <p>Million Members</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-projector"></i>
-              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Completed Projects</p>
+              <span data-purecounter-start="0" data-purecounter-end="186" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Non-DT Sacco</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="175" data-purecounter-duration="1" class="purecounter"></span>
+              <p>DT Sacco</p>
             </div>
           </div>
 
@@ -125,15 +222,7 @@
             <div class="count-box">
               <i class="bi bi-clock"></i>
               <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support Per Day</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Our Clients</p>
+              <p>Hrs Of G&G Support</p>
             </div>
           </div>
 
@@ -293,7 +382,33 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-circle"></i></a>
   <a href="https://api.whatsapp.com/send/?phone=+254723139338&text=Hello+G+&+G..." class="whatsapp d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
   <div id="preloader"><img src="assets/img/logo.png" alt=""></div>
