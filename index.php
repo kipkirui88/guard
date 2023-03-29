@@ -297,6 +297,20 @@ window.onclick = function(event) {
   }
 }
 </script>
+<<<<<<< HEAD:index.php
+=======
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-circle"></i></a>
+<a href="https://api.whatsapp.com/send/?phone=+254723139338&text=Hello%20G & G%20I%20am%20reaching%20out%20to%20enquire%20on%20..." class="whatsapp d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+<div id="preloader"><img src="assets/img/logo.png" alt=""></div>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+>>>>>>> 7da589f909aaadec76eb145fa714ca87bef3900e:index.html
 
   <?php include 'includes/scripts.php' ?>
 
