@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include 'includes/header.php' ?>
+
+<?php
+phpinfo();
+ include 'includes/header.php' ?>
 <style>/* The Modal (background) */
   .modal {
     display: none; /* Hidden by default */
