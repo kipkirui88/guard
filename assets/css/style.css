@@ -62,13 +62,13 @@ h6 {
 }
 .whatsapp {
   position: fixed;
-  left: 15px;
-  bottom: 15px;
+  right: 10px;
+  top: 70px;
   z-index: 996;
   background: rgb(55, 205, 17);
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 50%;
   transition: all 0.4s;
 }
 
@@ -82,11 +82,11 @@ h6 {
 --------------------------------------------------------------*/
 #preloader {
   position: fixed;
-  inset: 0;
+  /* inset: 0; */
   z-index: 9999;
   overflow: hidden;
   background: #0989c5;
-  transition: all 0.1s ease-out;
+  transition:  0.1s ease-out;
 }
 #preloader img{position: absolute; 
   width: 10%;
@@ -576,7 +576,11 @@ section {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+@media (max-width: 768px) {
+    .breadcrumbs .container h2{
+        font-size: 30px;
+    }
+}
 .breadcrumbs:before {
   content: "";
   position: absolute;
@@ -637,7 +641,7 @@ section {
 }
 
 .clients .client-logo img {
-  height: 40px;
+  height: 70px;
 }
 
 .clients .client-logo:hover img {
@@ -837,10 +841,13 @@ section {
   .tabs .nav-link i {
     font-size: 24px;
   }
+  .tabs .img-fluid img{
+    height: 20vh;
+  }
 }
 
 .tabs .tab-content {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .tabs .tab-pane h3 {
@@ -1186,13 +1193,19 @@ section {
   overflow: hidden;
   border-radius: 5px;
   background: #fff;
+  border: 2px solid #56b8e6 ;
 }
 
 .team .member .member-img {
   position: relative;
   overflow: hidden;
+  height: 35vh;
 }
-
+@media (max-width: 768px) {
+.team .member{
+    height: 100%;
+    width:100%;
+}}
 .team .member .social {
   position: absolute;
   left: 0;
@@ -1234,17 +1247,17 @@ section {
 }
 
 .team .member .member-info h4 {
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #111111;
+  color: #0989c5;
 }
 
 .team .member .member-info span {
   display: block;
   font-size: 13px;
-  font-weight: 400;
-  color: #aaaaaa;
+  font-weight: bold;
+  color: #213b52;
 }
 
 .team .member .member-info p {
